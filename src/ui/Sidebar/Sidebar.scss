@@ -1,0 +1,19 @@
+.sidebar {
+  background-color: var(--color-grey-light-1);
+  padding: 2rem 2.4rem 0;
+  border-right: 1px solid var(--color-grey-light-2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  order: 0;
+  gap: 3.2rem;
+
+  @include respond(tab-port) {
+    align-items: stretch;
+    grid-row: 1 / -1;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 3.2rem 2.4rem;
+  }
+}

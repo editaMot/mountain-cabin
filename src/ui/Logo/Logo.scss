@@ -1,0 +1,9 @@
+.logo {
+  height: auto;
+  width: 8rem;
+
+  @include respond(tab-port) {
+    width: 80%;
+    align-self: center;
+  }
+}

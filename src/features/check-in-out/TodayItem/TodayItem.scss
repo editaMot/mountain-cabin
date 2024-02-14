@@ -1,0 +1,55 @@
+.item {
+  display: grid;
+  grid-template-columns: 9rem 1fr 9rem;
+  gap: 1.4rem;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--color-grey-light-2);
+
+  @include respond(phone) {
+    font-size: 1.4rem;
+    gap: 1.2rem;
+    grid-template-columns: 9rem 2rem 15rem 1fr 9rem;
+  }
+
+  @include respond(tab-land) {
+    grid-template-columns: 9rem 2rem 6rem 1fr 9rem;
+    gap: 1.2rem;
+    font-size: 1.2rem;
+  }
+
+  @include respond(desktop) {
+    grid-template-columns: 9rem 2rem 1fr 1fr 9rem;
+    gap: 1.4rem;
+    font-size: 1.4rem;
+  }
+
+  &:first-child {
+    border-top: 1px solid var(--color-grey-light-2);
+  }
+
+  &__flag {
+    display: none;
+
+    @include respond(phone) {
+      display: block;
+      max-width: 2rem;
+      border-radius: var(--border-xs);
+      display: block;
+      border: 1px solid var(--color-grey-light-2);
+    }
+  }
+
+  &__guest {
+    font-weight: 600;
+  }
+
+  &__nights {
+    display: none;
+
+    @include respond(phone) {
+      display: block;
+    }
+  }
+}

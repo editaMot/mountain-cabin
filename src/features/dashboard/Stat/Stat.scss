@@ -1,0 +1,126 @@
+.stat {
+  background-color: var(--color-grey-light-1);
+  border: 1px solid var(--color-grey-light-2);
+  border-radius: var(--border-md);
+  padding: 1.6rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 1.6rem;
+  row-gap: 0.4rem;
+  width: 100%;
+
+  @include respond(phone) {
+    width: calc(50% - 0.5rem);
+  }
+
+  @include respond(tab-land) {
+    width: calc((100% / 4) - 2rem);
+  }
+
+  @include respond(big-desktop) {
+    padding: 1.4rem;
+  }
+
+  &__icon {
+    grid-row: 1 / -1;
+    aspect-ratio: 1;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    background-color: var(--color-grey-light-3);
+
+    @include respond(tab-land) {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    @include respond(big-desktop) {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    & svg {
+      width: 3.2rem;
+      height: 3.2rem;
+      color: var(--color-grey-light-3);
+
+      @include respond(tab-land) {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+      @include respond(big-desktop) {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
+    }
+
+    &--blue {
+      background-color: var(--color-blue-light);
+
+      & svg {
+        color: var(--color-blue-dark);
+      }
+    }
+
+    &--green {
+      background-color: var(--color-green-light);
+
+      & svg {
+        color: var(--color-green-dark);
+      }
+    }
+
+    &--indigo {
+      background-color: var(--color-indigo-light);
+
+      & svg {
+        color: var(--color-indigo-dark);
+      }
+    }
+
+    &--yellow {
+      background-color: var(--color-yellow-light);
+
+      & svg {
+        color: var(--color-yellow-dark);
+      }
+    }
+  }
+
+  &__title {
+    align-self: end;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    font-weight: 600;
+    color: var(--color-grey-dark-1);
+
+    @include respond(tab-land) {
+      font-size: 1.2rem;
+    }
+
+    @include respond(big-desktop) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__value {
+    font-size: 2.4rem;
+    line-height: 1;
+    font-weight: 500;
+
+    @include respond(tab-land) {
+      font-size: 1.7rem;
+    }
+
+    @include respond(big-desktop) {
+      font-size: 2.4rem;
+    }
+  }
+}

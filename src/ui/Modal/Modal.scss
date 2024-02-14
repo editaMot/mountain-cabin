@@ -1,0 +1,55 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(7px);
+  z-index: 2;
+  transition: all 0.5s;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  transform: translate(0%, -50%);
+  width: 100%;
+  background-color: var(--color-grey-light-1);
+  border-radius: var(--border-lg);
+  box-shadow: 0 2.4rem 3.2rem rgba(0, 0, 0, 0.12);
+  padding: 3.2rem 4rem;
+  transition: all 0.5s;
+
+  @include respond(phone) {
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @include respond(tab-port) {
+    width: auto;
+  }
+
+  &__btn {
+    background: none;
+    border: none;
+    padding: 0.4rem;
+    border-radius: var(--border-sm);
+    transform: translateX(0.8rem);
+    transition: all 0.2s;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.9rem;
+
+    &:hover {
+      background-color: var(--color-grey-light-2);
+    }
+
+    & svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      color: var(--color-grey-dark-1);
+    }
+  }
+}

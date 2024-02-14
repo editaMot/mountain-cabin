@@ -1,0 +1,123 @@
+.booking-data {
+  background-color: var(--color-grey-light-1);
+  border: 1px solid var(--color-grey-light-2);
+  border-radius: var(--border-md);
+  overflow: hidden;
+
+  &__header {
+    background-color: var(--color-primary-dark);
+    color: var(--text-light);
+    padding: 1rem 2rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @include respond(phone) {
+      padding: 2rem 4rem;
+      font-size: 1.8rem;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    svg {
+      height: 2.5rem;
+      width: 2.5rem;
+
+      @include respond(phone) {
+        height: 3.2rem;
+        width: 3.2rem;
+      }
+    }
+
+    & div:first-child {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      font-weight: 600;
+      font-size: 1.8rem;
+    }
+
+    & span {
+      font-size: 2rem;
+      margin-left: 4px;
+    }
+  }
+
+  &__details {
+    padding: 2rem 2rem 1.2rem;
+
+    @include respond(phone) {
+      padding: 3.2rem 4rem 1.2rem;
+    }
+  }
+
+  &__guest {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-bottom: 1.6rem;
+    color: var(--color-grey-dark-1);
+
+    & p:first-of-type {
+      font-weight: 600;
+      color: var(--color-grey-dark-1);
+    }
+
+    @include respond(phone) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__flag {
+    max-width: 2rem;
+    border-radius: var(--border-xs);
+    display: block;
+    border: 1px solid var(--color-grey-light-2);
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: vart(--border-sm);
+
+    @include respond(phone) {
+      margin-top: 2.4rem;
+      padding: 1.6rem 3.2rem;
+      gap: auto;
+    }
+
+    background-color: var(--color-yellow-light);
+    color: var(--color-yellow-dark);
+
+    &--paid {
+      background-color: var(--color-primary-light);
+      color: var(--text-light);
+    }
+
+    & p:last-child {
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    svg {
+      height: 2.4rem;
+      width: 2.4rem;
+      color: currentColor !important;
+    }
+  }
+
+  &__footer {
+    padding: 1.6rem 4rem;
+    font-size: 1.2rem;
+    color: var(--color-grey-dark-1);
+    text-align: right;
+  }
+}

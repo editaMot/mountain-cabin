@@ -1,0 +1,24 @@
+.status {
+  width: fit-content;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.4rem 1.2rem;
+  border-radius: 100px;
+  text-align: center;
+
+  &--unconfirmed {
+    background-color: var(--color-blue-light);
+    color: var(--color-blue-dark);
+  }
+
+  &--checked-in {
+    background-color: var(--color-green-light);
+    color: var(--color-green-dark);
+  }
+
+  &--checked-out {
+    background-color: var(--color-grey-light-4);
+    color: var(--color-grey-dark-1);
+  }
+}

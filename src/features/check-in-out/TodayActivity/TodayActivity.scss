@@ -1,0 +1,42 @@
+.today-items {
+  background-color: var(--color-grey-light-1);
+  border: 1px solid var(--color-grey-light-2);
+  border-radius: var(--border-md);
+  overflow: auto;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  grid-column: 1 / span 2;
+
+  @include respond(tab-land) {
+    padding: 2.4rem 1.2rem;
+  }
+
+  @include respond(desktop) {
+    padding: 2.4rem 2rem;
+  }
+
+  @include respond(big-desktop) {
+    padding: 2.4rem 3.2rem;
+  }
+
+  &__list {
+    overflow: scroll;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      width: 0 !important;
+    }
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  &__no-activity {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 0.8rem;
+  }
+}

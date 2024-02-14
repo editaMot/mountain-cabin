@@ -1,0 +1,25 @@
+.checkin {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  &__checkbox {
+    background-color: var(--color-grey-light-1);
+    border: 1px solid var(--color-grey-light-2);
+    border-radius: var(--border-md);
+    padding: 2.4rem 4rem;
+  }
+
+  &__button-group {
+    display: flex;
+    gap: 2.4rem;
+    align-items: center;
+  }
+}

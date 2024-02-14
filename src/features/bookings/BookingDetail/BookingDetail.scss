@@ -1,0 +1,36 @@
+.booking {
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+
+    @include respond(tab-land) {
+      flex-wrap: nowrap;
+      gap: 0;
+    }
+  }
+
+  &__heading {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  &__button-group {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include respond(phone) {
+      justify-content: flex-end;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__header-group {
+    display: flex;
+    gap: 2.4rem;
+    align-items: center;
+  }
+}

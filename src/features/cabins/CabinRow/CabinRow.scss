@@ -1,0 +1,31 @@
+.table-row {
+  &__img {
+    display: block;
+    width: 6.4rem;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.5);
+    margin: 1rem 0;
+
+    @include respond(tab-land) {
+      transform: scale(1.5) translateX(-7px);
+      margin: 0;
+    }
+  }
+
+  &__cabin {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  &__discount {
+    font-weight: 600;
+  }
+}
+
+.sm-device {
+  @include respond(tab-land) {
+    display: none;
+  }
+}

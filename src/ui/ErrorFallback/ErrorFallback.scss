@@ -1,0 +1,39 @@
+.error-fallback {
+  height: 100vh;
+  background-color: var(--color-grey-light-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin: 0 auto;
+
+  border-radius: var(--border-md);
+
+  @include respond(tab-port) {
+    padding: 4.8rem;
+  }
+
+  @include respond(tab-land) {
+    height: 90vh;
+    width: 80%;
+  }
+
+  &__box {
+    background-color: var(--color-grey-light-1);
+    border: 1px solid var(--color-grey-light-1);
+    border-radius: var(--border-md);
+
+    padding: 4.8rem;
+    flex: 0 1 96rem;
+    text-align: center;
+
+    & h1 {
+      margin-bottom: 1.6rem;
+    }
+
+    & p {
+      margin-bottom: 3.2rem;
+      color: var(--color-grey-dark-1);
+    }
+  }
+}

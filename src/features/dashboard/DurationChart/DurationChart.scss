@@ -1,0 +1,23 @@
+.chart-box {
+  background-color: var(--color-grey-light-1);
+  border: 1px solid var(--color-grey-light-2);
+  border-radius: var(--border-md);
+
+  padding: 1.6rem;
+  grid-column: 3 / span 2;
+
+  @include respond(tab-land) {
+    padding: 2.4rem 3.2rem;
+  }
+
+  & > *:first-child {
+    margin-bottom: 1.6rem;
+  }
+  & .recharts-pie-label-text {
+    font-weight: 600;
+  }
+
+  & .recharts-legend-item {
+    margin: 0 0 1rem 1rem;
+  }
+}

@@ -1,0 +1,23 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+
+  @include respond(tab-port) {
+    overflow: hidden;
+    border-radius: var(--border-md);
+    display: grid;
+    grid-template-columns: 26rem 1fr;
+    grid-template-rows: auto 1fr;
+    margin: 0 auto;
+    height: calc(100vh - 2rem);
+  }
+
+  @include respond(tab-land) {
+    height: calc(100vh - 4rem);
+  }
+
+  @include respond(big-desktop) {
+    height: calc(100vh - 6rem);
+    max-width: 150rem;
+  }
+}
