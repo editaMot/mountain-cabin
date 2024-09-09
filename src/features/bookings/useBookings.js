@@ -21,9 +21,6 @@ export const useBookings = () => {
   const searchValue = searchParams.get("search");
   const search = { field: "guests.fullName", value: searchValue };
 
-  // console.log(searchValue);
-  // console.log(search);
-
   const page = !searchParams.get("page") ? 1 : Number(searchParams.get("page"));
 
   const {
